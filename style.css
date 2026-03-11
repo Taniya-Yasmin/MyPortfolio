@@ -351,6 +351,13 @@ ul {
   overflow: visible;
 }
 
+/* Capping height for tall mobile screens where 100vh scaled to 1280px is massive */
+@media (max-aspect-ratio: 1/1) {
+  .hero-section {
+    min-height: 750px;
+  }
+}
+
 /* Spotlight glow */
 .hero-spotlight {
   position: absolute;
@@ -1407,11 +1414,13 @@ ul {
   font-size: 0.88rem;
   color: var(--text);
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .contact-socials {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 .social-btn {
   width: 42px;
@@ -2259,8 +2268,10 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
+  padding: 96px 20px 28px;
+  overflow-y: auto;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -2314,424 +2325,16 @@ ul {
 }
 
 /* ============================================
-   RESPONSIVE — 1024px (Tablet landscape)
+   RESPONSIVE — DISABLED (force desktop view on all screens)
+   All mobile/tablet breakpoints below are commented out
+   to preserve the desktop layout on every device.
    ============================================ */
-@media (max-width: 1024px) {
-  /* Layout stacking */
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 52px;
-    text-align: center;
-  }
-  .hero-left {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .hero-badge {
-    align-self: center;
-  }
-  .hero-intro {
-    max-width: 560px;
-    text-align: left;
-  }
-  .hero-actions {
-    justify-content: center;
-  }
-  .hero-socials {
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .tech-tags {
-    justify-content: center;
-  }
-  .hero-right {
-    justify-content: center;
-  }
-  .hero-right-empty {
-    display: none;
-  }
 
-  /* Hero section */
-  .hero-section {
-    padding: 110px 40px 80px;
-    max-width: 100%;
-  }
+/* @media (max-width: 1024px) { ... } — REMOVED */
 
-  /* Orb sizing */
-  .orb-container {
-    width: 320px;
-    height: 320px;
-  }
-  .hero-orb {
-    width: 240px;
-    height: 240px;
-  }
-  .r1 {
-    width: 260px;
-    height: 260px;
-  }
-  .r2 {
-    width: 300px;
-    height: 300px;
-  }
-  .r3 {
-    width: 320px;
-    height: 320px;
-  }
-  .f1,
-  .f2,
-  .f3 {
-    display: none;
-  }
-
-  /* About */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* Featured project */
-  .featured-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  /* Contact */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  /* Stack */
-  .stack-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ============================================
-   RESPONSIVE — 768px (Tablet portrait / large mobile)
-   ============================================ */
-@media (max-width: 768px) {
-  :root {
-    --nav-offset: 72px;
-  }
-  /* Container */
-  .container {
-    padding: 0 20px;
-  }
-
-  /* Sections */
-  .section {
-    padding: 80px 0;
-  }
-  .section-header {
-    margin-bottom: 44px;
-  }
-
-  /* Nav */
-  #nav-header {
-    padding: 0;
-    justify-content: flex-end;
-  }
-  .nav-pill {
-    gap: 12px;
-    padding: 10px 16px;
-  }
-  .nav-name {
-    margin-right: auto;
-    font-size: 0.95rem;
-  }
-  .nav-links {
-    display: none;
-  } /* hidden — burger replaces it */
-  .nav-cta {
-    display: none;
-  } /* hidden — inside mobile menu instead */
-  .nav-hamburger {
-    display: flex;
-  }
-
-  /* Hero */
-  .hero-section {
-    padding: 96px 20px 60px;
-  }
-  .hero-heading {
-    font-size: clamp(2.2rem, 8vw, 3rem);
-  }
-  .hero-intro {
-    font-size: 0.92rem;
-  }
-  .hero-cta-group {
-    width: 100%;
-    max-width: 520px;
-  }
-  .hero-actions {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero-socials {
-    width: 100%;
-    max-width: none;
-    justify-content: center;
-    margin-top: 14px;
-    gap: 12px;
-  }
-  .btn-primary,
-  .btn-secondary {
-    padding: 12px 22px;
-    font-size: 0.85rem;
-  }
-
-  /* Orb — smaller on tablet */
-  .orb-container {
-    width: 260px;
-    height: 260px;
-  }
-  .hero-orb {
-    width: 200px;
-    height: 200px;
-  }
-  .r1 {
-    width: 210px;
-    height: 210px;
-  }
-  .r2 {
-    width: 240px;
-    height: 240px;
-  }
-  .r3 {
-    width: 260px;
-    height: 260px;
-  }
-
-  /* About */
-  .about-stats {
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .stat-num {
-    font-size: 1.75rem;
-  }
-
-  /* Projects */
-  .featured-project {
-    padding: 28px 20px;
-  }
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
-  .filter-tabs {
-    gap: 6px;
-  }
-  .filter-btn {
-    padding: 7px 14px;
-    font-size: 0.78rem;
-  }
-
-  /* Certifications */
-  .certs-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .cert-card {
-    padding: 18px 16px;
-  }
-
-  /* Tech stack */
-  .stack-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .stack-category {
-    padding: 20px 16px;
-  }
-
-  /* Contact */
-  .contact-form-card {
-    padding: 24px 20px;
-  }
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  /* Footer */
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .footer-links {
-    display: flex;
-  } /* show on tablet+ */
-  .footer-bottom p {
-    font-size: 0.72rem;
-  }
-}
-
-/* ============================================
-   RESPONSIVE — 480px (Mobile)
-   ============================================ */
-@media (max-width: 480px) {
-  :root {
-    --nav-offset: 64px;
-  }
-  /* Container */
-  .container {
-    padding: 0 16px;
-  }
-
-  /* Hero */
-  .hero-section {
-    padding: 88px 16px 48px;
-  }
-  .hero-heading {
-    font-size: clamp(1.85rem, 9vw, 2.5rem);
-    letter-spacing: -0.03em;
-  }
-  .hero-badge {
-    font-size: 0.72rem;
-  }
-  .hero-cta-group {
-    width: 100%;
-    max-width: 300px;
-  }
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-  .hero-socials {
-    width: 100%;
-    max-width: none;
-    margin-top: 12px;
-    justify-content: center;
-    gap: 10px;
-  }
-  .hero-socials .social-btn {
-    width: 54px;
-    height: 54px;
-    border-radius: 12px;
-  }
-  .hero-socials .social-btn svg,
-  .leetcode-icon {
-    width: 24px;
-    height: 24px;
-  }
-  .nav-name {
-    font-size: 0.88rem;
-  }
-  .btn-primary,
-  .btn-secondary {
-    justify-content: center;
-  }
-  .tech-tags {
-    gap: 8px;
-  }
-  .tech-tag {
-    font-size: 0.7rem;
-    padding: 4px 10px;
-  }
-
-  /* Orb — compact */
-  .orb-container {
-    width: 220px;
-    height: 220px;
-  }
-  .hero-orb {
-    width: 170px;
-    height: 170px;
-  }
-  .r1 {
-    width: 180px;
-    height: 180px;
-  }
-  .r2 {
-    width: 200px;
-    height: 200px;
-  }
-  .r3 {
-    width: 220px;
-    height: 220px;
-  }
-
-  /* About */
-  .about-card {
-    padding: 20px;
-  }
-  .about-stats {
-    gap: 16px;
-  }
-
-  /* Projects */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .featured-project {
-    padding: 20px 16px;
-  }
-  .project-title {
-    font-size: 1.2rem;
-  }
-
-  /* Certifications */
-  .cert-logo {
-    width: 44px;
-    height: 44px;
-  }
-
-  /* Stack */
-  .stack-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Contact */
-  .section-heading {
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
-  }
-  .contact-form-card {
-    padding: 20px 16px;
-  }
-
-  /* Footer */
-  .footer-links {
-    display: none;
-  }
-  .footer-inner {
-    gap: 16px;
-  }
-}
-
-/* ============================================
-   RESPONSIVE — 380px (Very small phones)
-   ============================================ */
-@media (max-width: 380px) {
-  .hero-heading {
-    font-size: 1.7rem;
-  }
-  .hero-badge {
-    font-size: 0.65rem;
-    padding: 5px 12px;
-  }
-  .nav-pill {
-    padding: 7px 12px;
-    gap: 10px;
-  }
-  .about-stats {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .about-stats .stat-item {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-  .stat-num {
-    font-size: 1.5rem;
-  }
-}
+/* @media (max-width: 768px) { ... } — REMOVED */
+/* @media (max-width: 480px) { ... } — REMOVED */
+/* @media (max-width: 380px) { ... } — REMOVED */
 
 /* New sections — responsive */
 .education-grid {
@@ -2744,90 +2347,8 @@ ul {
 }
 /* Experience timeline — stays 2-col until 768 */
 
-/* ============================================
-   RESPONSIVE — 768px additions for new sections
-   ============================================ */
-@media (max-width: 768px) {
-  /* Education */
-  .education-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  /* Carousel — stack image+card on mobile */
-  .carousel-slide:not(.fslide) {
-    grid-template-columns: 1fr;
-    padding: 28px 20px;
-    gap: 24px;
-  }
-  .carousel-slide.fslide {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  .fslide-img {
-    height: 200px;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  }
-  .fslide-card {
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    border-left: 1px solid var(--accent);
-    border-top: 3px solid var(--accent);
-  }
-  .car-code-preview {
-    min-height: 160px;
-  }
-  .car-title {
-    font-size: 1.15rem;
-  }
-
-  /* Experience — stack to single column */
-  .exp-timeline::before {
-    left: 16px;
-    transform: none;
-  }
-  .exp-entry {
-    grid-template-columns: 24px 1fr;
-    gap: 0 16px;
-  }
-  .exp-entry.left .exp-date,
-  .exp-entry.right .exp-date {
-    display: block;
-    grid-column: 2;
-    order: 0;
-    text-align: left;
-    padding-top: 0;
-    padding-bottom: 6px;
-  }
-  .exp-entry.left .exp-dot,
-  .exp-entry.right .exp-dot {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 4px;
-    order: 1;
-  }
-  .exp-entry.left .exp-card,
-  .exp-entry.right .exp-card {
-    grid-column: 2;
-    grid-row: 2;
-    order: 2;
-  }
-}
-
-/* ============================================
-   RESPONSIVE — 480px additions for new sections
-   ============================================ */
-@media (max-width: 480px) {
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-  .carousel-slide:not(.fslide) {
-    padding: 20px 16px;
-    gap: 20px;
-  }
-  .car-title {
-    font-size: 1rem;
-  }
-}
+/* @media (max-width: 768px) additions — REMOVED */
+/* @media (max-width: 480px) additions — REMOVED */
 
 /* ============================================
    THEME TOGGLE BUTTON
@@ -3043,11 +2564,7 @@ ul {
   line-height: 1.65;
 }
 
-@media (max-width: 600px) {
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* @media (max-width: 600px) achievements — REMOVED */
 
 /* ============================================
    RESUME MODAL
@@ -3147,12 +2664,4 @@ ul {
 .resume-download-btn {
   gap: 8px;
 }
-@media (max-width: 600px) {
-  .resume-modal-card {
-    max-height: calc(100vw * 1.33);
-    border-radius: 0;
-  }
-  .resume-modal-iframe {
-    min-height: 100%;
-  }
-}
+/* @media (max-width: 600px) resume modal — REMOVED */
