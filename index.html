@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taniya's Portfolio</title>
+    <meta
+      name="description"
+      content="Full Stack Developer and AI Enthusiast. Designing intelligent digital systems with modern web technologies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css?9e2f25bd-1666-4c43-8ab9-8a30dc09567f"
+    />
+    <!-- EmailJS for download notification -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Canvas for particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Grid texture overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- ========== NAV ========== -->
+    <header id="nav-header">
+      <nav class="nav-pill" role="navigation" aria-label="Main navigation">
+        <a href="#hero" class="nav-name">Taniya Yasmin</a>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#stack" class="nav-link">Skills</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle theme"
+          title="Toggle light/dark mode"
+        >
+          <!-- Moon (dark mode icon, shown by default) -->
+          <svg
+            class="icon-moon"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+          <!-- Sun (light mode icon) -->
+          <svg
+            class="icon-sun"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+        <button
+          class="nav-hamburger"
+          id="nav-hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile menu drawer -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#stack" class="mobile-nav-link">Skills</a></li>
+        <li>
+          <a href="#certifications" class="mobile-nav-link">Certifications</a>
+        </li>
+        <li>
+          <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        </li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section id="hero" class="hero-section">
+        <div class="hero-spotlight"></div>
+
+        <div class="hero-inner">
+          <!-- Left -->
+          <div class="hero-left reveal">
+            <h1 class="hero-heading">
+              Hii, I'm<br />
+              <span class="accent-text">Taniya Yasmin</span>
+            </h1>
+            <p class="hero-role-line">
+              <span class="code-bracket">&lt;</span>
+              <span id="rotating-role">MERN Stack Developer</span>
+              <span class="code-bracket">/&gt;</span>
+            </p>
+            <p class="hero-intro">
+              I design, build, and deploy scalable web systems using modern
+              development and DevOps practices - turning ideas into reliable,
+              production-ready applications.
+            </p>
+            <div class="hero-cta-group">
+              <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                  <span>View Projects</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <button id="btn-resume" class="btn-secondary">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M8 1v9M4 7l4 4 4-4M2 13h12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Resume
+                </button>
+              </div>
+              <div class="hero-socials">
+                <a
+                  href="mailto:taniyayasmin65@gmail.com"
+                  class="social-btn"
+                  aria-label="Email"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path
+                      d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"
+                    />
+                    <path d="m22 7-10 7L2 7" />
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/taniya-yasmin"
+                  target="_blank"
+                  class="social-btn"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/TaniyaYasmin"
+                  target="_blank"
+                  class="social-btn"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://leetcode.com/u/TanCodess/"
+                  target="_blank"
+                  class="social-btn"
+                  aria-label="LeetCode"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side intentionally empty -->
+     <div
+  class="hero-right hero-right-empty reveal reveal-right"
+  aria-hidden="true"
+>
+  <img src="images/download (2).jpg" alt="">
+</div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span></span>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="about-single reveal">
+            <p class="section-label">&lt; About /&gt;</p>
+            <h2 class="section-heading">
+              Building at the intersection of code and intelligence
+            </h2>
+            <div class="about-media glass-card">
+              <img
+                src="images/about.png"
+                alt="About section image"
+                class="about-photo"
+              />
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="exp-timeline reveal">
+            <!-- Entry 1: date left, card right -->
+            <div class="exp-entry left">
+              <div class="exp-date">2023 &mdash; 2027</div>
+              <div class="exp-dot"></div>
+              <div class="exp-card glass-card">
+                <span class="exp-role"
+                  >B.E. &mdash; Computer Science &amp; Engineering</span
+                >
+                <span class="exp-company"
+                  >ACS College of Engineering, Bangalore</span
+                >
+                <div class="exp-tags" style="margin-top: 10px">
+                  <span class="proj-tag sm">CGPA: 8.5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Entry 2: card left, date right -->
+            <div class="exp-entry right">
+              <div class="exp-date">Apr 2023</div>
+              <div class="exp-dot"></div>
+              <div class="exp-card glass-card">
+                <span class="exp-role">Pre-University [PCMC]</span>
+                <span class="exp-company"
+                  >St. Joseph's Indian Composite PU College</span
+                >
+                <div class="exp-tags" style="margin-top: 10px">
+                  <span class="proj-tag sm">Score: 89%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Entry 3: date left, card right -->
+            <div class="exp-entry left">
+              <div class="exp-date">Mar 2021</div>
+              <div class="exp-dot"></div>
+              <div class="exp-card glass-card">
+                <span class="exp-role">School [ICSE]</span>
+                <span class="exp-company"
+                  >Shantiniketan Educational Institutions</span
+                >
+                <div class="exp-tags" style="margin-top: 10px">
+                  <span class="proj-tag sm">Score: 90.8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section id="projects" class="section projects-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">&lt; Projects /&gt;</p>
+            <h2 class="section-heading">Work that speaks for itself</h2>
+            <p class="section-sub">
+              A selection of projects that challenged and sharpened my craft.
+            </p>
+          </div>
+
+          <!-- Featured project carousel (screenshot style) -->
+          <div class="proj-carousel reveal" id="proj-carousel">
+            <!-- Floating side arrows -->
+            <button
+              class="car-arrow left-arrow"
+              id="car-prev"
+              aria-label="Previous project"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              class="car-arrow right-arrow"
+              id="car-next"
+              aria-label="Next project"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+
+            <div class="proj-carousel-viewport">
+              <div class="carousel-track" id="carousel-track">
+                <!-- Slide 1: SyncVerse -->
+                <div class="carousel-slide fslide">
+                  <div class="fslide-img">
+                    <img
+                      src="images/image copy 2.png"
+                      alt="AlgoRush project preview"
+                      class="fslide-hero-img"
+                    />
+                  </div>
+                  <div class="fslide-card">
+                    <span class="featured-label">FEATURED PROJECT</span>
+                    <h3 class="fslide-title">AlgoRush</h3>
+                    <p class="fslide-desc">
+                      Full-stack AI chatbot designed for interactive DSA learning with
+                      smart prompt handling, chat history, voice input, and JWT-based
+                      authentication.
+                    </p>
+                    <div class="fslide-tags">
+                      <span class="proj-tag sm">HTML</span>
+                      <span class="proj-tag sm">CSS</span>
+                      <span class="proj-tag sm">JavaScript</span>
+                      <span class="proj-tag sm">Node.js</span>
+                      <span class="proj-tag sm">MongoDB</span>
+                      <span class="proj-tag sm">Express.js</span>
+                      <span class="proj-tag sm">JWT</span>
+                    </div>
+                    <div class="fslide-links">
+                      <a href="https://github.com/Taniya-Yasmin/AlgoRush" target="_blank" aria-label="GitHub" class="fslide-icon-btn">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        aria-label="Live Demo"
+                        class="fslide-icon-btn"
+                      >
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: FinTech -->
+                <div class="carousel-slide fslide">
+                  <div class="fslide-img">
+                    <img
+                      src="images/fintech.png"
+                      alt="FinTech project preview"
+                      class="fslide-hero-img"
+                    />
+                  </div>
+                  <div class="fslide-card">
+                    <span class="featured-label">FEATURED PROJECT</span>
+                    <h3 class="fslide-title">FinTech</h3>
+                    <p class="fslide-desc">
+                      A full-stack web application that helps users track transactions,
+                      manage budgets, and visualize spending patterns through interactive
+                      dashboards, built with a responsive UI and secure data handling.
+                    </p>
+                    <div class="fslide-tags">
+                      <span class="proj-tag sm">React</span>
+                      <span class="proj-tag sm">Node.js</span>
+                      <span class="proj-tag sm">Express</span>
+                      <span class="proj-tag sm">MongoDB</span>
+                      <span class="proj-tag sm">Chart.js</span>
+                      <span class="proj-tag sm">JWT Auth</span>
+                    </div>
+                    <div class="fslide-links">
+                      <a href="#" target="_blank" aria-label="GitHub" class="fslide-icon-btn">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        aria-label="Live Demo"
+                        class="fslide-icon-btn"
+                      >
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project gallery with filters -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="web">WEB</button>
+            <button class="filter-btn" data-filter="ml">AI/ML</button>
+            <button class="filter-btn" data-filter="devops">DEVOPS</button>
+            <button class="filter-btn" data-filter="mini">MINI PROJECTS</button>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card" data-category="ml">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy.png"
+                    alt="Android Malware Detect"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  Malware Detector
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="https://github.com/Taniya-Yasmin/ANDROID-MALWARE-DETECTOR"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                ML-based Android security tool that analyzes APK permissions and
+                features to classify malware using Random Forest and XGBoost
+                with 92%+ accuracy.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">Python</span>
+                <span class="proj-tag sm">Machine Learning</span>
+                <span class="proj-tag sm">Data Science</span>
+                <span class="proj-tag sm">Random Forest</span>
+                <span class="proj-tag sm">XGBoost</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="devops">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/devsecops.png"
+                    alt="CloudDeployX"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  CloudDeployX
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="https://github.com/Taniya-Yasmin/clouddeployx-devsecops"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                Implemented secure Blue-Green deployment for a containerized
+                Swiggy-clone using AWS ECS and CodePipeline, enabling
+                zero-downtime releases and automated CI/CD.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">AWS</span>
+                <span class="proj-tag sm">Docker</span>
+                <span class="proj-tag sm">CI/CD</span>
+                <span class="proj-tag sm">Jenkins</span>
+                <span class="proj-tag sm">Blue-green deployment </span>
+                <span class="proj-tag sm">GitHub</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 2.png"
+                    alt="AlgoRush"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  AlgoRush
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="https://github.com/Taniya-Yasmin/AlgoRush"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                Full-stack AI chatbot designed for interactive DSA learning with
+                smart prompt handling, chat history, voice input, and JWT-based
+                authentication.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">HTML</span>
+                <span class="proj-tag sm">CSS</span>
+                <span class="proj-tag sm">JavaScript</span>
+                <span class="proj-tag sm">Node.js</span>
+                <span class="proj-tag sm">MongoDB</span>
+                <span class="proj-tag sm">Express.js</span>
+                <span class="proj-tag sm">JWT</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="mini">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 3.png"
+                    alt="NetflixClone"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  NetflixClone
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="https://github.com/Taniya-Yasmin/NetflixClone"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                Recreated Netflix’s responsive landing page with modern UI
+                design, hover effects, animations, and layout built using
+                Flexbox and CSS Grid.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">Web Development</span>
+                <span class="proj-tag sm">HTML</span>
+                <span class="proj-tag sm">CSS</span>
+                <span class="proj-tag sm">CSS Flexbox</span>
+                <span class="proj-tag sm">CSS Grid</span>
+                <span class="proj-tag sm">CSS Navbar</span>
+                <span class="proj-tag sm">CSS Footer</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="mini">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 4.png"
+                    alt="ClimaX"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">ClimaX</h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="https://github.com/Taniya-Yasmin/ClimaX-WeatherApp"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                Built a responsive weather app that displays live temperature,
+                humidity, wind speed, and conditions using OpenWeatherMap API
+                and JavaScript.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">HTML</span>
+                <span class="proj-tag sm">CSS</span>
+                <span class="proj-tag sm">JavaScript</span>
+                <span class="proj-tag sm">REST API</span>
+                <span class="proj-tag sm">OpenWeatherMap API</span>
+                <span class="proj-tag sm">API Integration</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 5.png"
+                    alt="Project 6"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  Portfolio
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="#"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                A personal developer portfolio designed to highlight my
+                projects, skills, and technical experience. Features responsive
+                design, project filtering, smooth animations, and a custom
+                dark-themed interface built with HTML, CSS, and JavaScript.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">HTML</span>
+                <span class="proj-tag sm">CSS</span>
+                <span class="proj-tag sm">JavaScript</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 6.png"
+                    alt="Project 7"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  DecodeAI
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="#"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">
+                AI-powered web application that explains code snippets in clear,
+                human-readable language. Supports bilingual output, customizable
+                explanation styles, and real-time AI processing for faster code
+                understanding.
+              </p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">Next.js</span>
+                <span class="proj-tag sm">React</span>
+                <span class="proj-tag sm">TypeScript</span>
+                <span class="proj-tag sm">Tailwind CSS</span>
+                <span class="proj-tag sm">Groq API</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/image copy 7.png"
+                    alt="Project 8"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  EvenTura
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="#"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">A full-stack event management platform where users can create, browse, and book events with real-time availability tracking. Features interactive maps, rich-text event creation, and a personalized dashboard for managing bookings and saved events.</p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">HTML</span>
+<span class="proj-tag sm">CSS</span>
+<span class="proj-tag sm">JavaScript</span>
+<span class="proj-tag sm">Node.js</span>
+<span class="proj-tag sm">Express</span>
+<span class="proj-tag sm">SQLite</span>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="proj-card-header">
+                <div class="proj-icon" style="overflow: hidden; padding: 0">
+                  <img
+                    src="images/fintech.png"
+                    alt="FinTech"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <h3 class="proj-card-title" style="margin-bottom: 0">
+                  FinTech
+                </h3>
+                <div
+                  style="display: flex; gap: 12px; align-items: center"
+                  class="proj-card-links"
+                >
+                  <a
+                    href="#"
+                    aria-label="GitHub Repository"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Live Demo"
+                    class="fslide-icon-btn"
+                    target="_blank"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="proj-card-desc">A full-stack web application that helps users track transactions, manage budgets, and visualize spending patterns through interactive dashboards, built with a responsive UI and secure data handling.</p>
+              <div class="proj-card-tags">
+                <span class="proj-tag sm">React</span>
+<span class="proj-tag sm">Node.js</span>
+<span class="proj-tag sm">Express</span>
+<span class="proj-tag sm">MongoDB</span>
+<span class="proj-tag sm">Chart.js</span>
+<span class="proj-tag sm">JWT Auth</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EXPERIENCE ========== -->
+      <section id="experience" class="section experience-section">
+        <div class="container">
+          <div class="section-header experience-header reveal">
+            <p class="section-label">&lt; Experience /&gt;</p>
+            <h2 class="section-heading">Where I've Worked</h2>
+          </div>
+
+          <div class="exp-entry-v reveal">
+            <div class="exp-dot-v"></div>
+            <div class="exp-card glass-card">
+              <div class="exp-card-header">
+                <span class="exp-role"
+                  >Machine Learning Intern &mdash; Alfido Tech (Remote)</span
+                >
+                <span class="exp-date-inline">Dec 2025 &mdash; Jan 2026</span>
+              </div>
+              <p class="exp-desc">
+                Completed a one-month remote Machine Learning internship working
+                on real-world ML workflows.
+              </p>
+
+              <ul class="exp-points">
+                <li>
+                  Implemented regression, classification, and clustering models
+                  with feature engineering and model selection.
+                </li>
+                <li>
+                  Built and evaluated ML models using Python, TensorFlow, and
+                  PyTorch.
+                </li>
+                <li>
+                  Worked on the complete pipeline from data preprocessing to
+                  model evaluation and deployment.
+                </li>
+              </ul>
+              <div class="exp-tags">
+                <span class="proj-tag sm">Python</span>
+                <span class="proj-tag sm">TensorFlow</span>
+                <span class="proj-tag sm">PyTorch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== TECH STACK ========== -->
+      <section id="stack" class="section stack-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">&lt; Tech Stack /&gt;</p>
+            <h2 class="section-heading">Technical Skills</h2>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                Programming
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">JavaScript</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Python</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">C++</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">Java</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">C</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                Web Development
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">HTML</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">CSS</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">JavaScript</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Node.js</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Express.js</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                APIs and Auth
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">JWT</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Client Server Architecture</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">RESTful APIs</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">API Development</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Authentication</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                Databases
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">MongoDB</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">MySQL</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Database Design</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">CRUD Operations</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                DevOps
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Docker</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">AWS (EC2, S3, IAM)</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Jenkins</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Git, GitHub, Linux</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                Core CS
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Data Structures and Algorithms</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Operating Systems</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">DBMS</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Computer Networks</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                AI/ML
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">NumPy</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Pandas</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Scikit-learn</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">TensorFlow</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">PyTorch</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-category reveal">
+              <h3 class="stack-cat-title">
+                <span class="stack-indicator"></span>
+                Tools
+              </h3>
+              <div class="stack-items">
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">Git</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">GitHub</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Docker</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">Nginx</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Postman</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span><span class="si-name">Linux</span>
+                </div>
+                <div class="stack-item">
+                  <span class="si-dot"></span
+                  ><span class="si-name">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== CERTIFICATIONS ========== -->
+      <section id="certifications" class="section certs-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">&lt; Certifications /&gt;</p>
+            <h2 class="section-heading">Validated Skills & Certifications</h2>
+          </div>
+
+          <div class="cert-img-grid">
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 122908.png"
+                  alt="Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">ORACLE 2025 DevOps Professional</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 123133.png"
+                  alt="Google Cloud Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">
+                  NPTEL: Intro to Machine Learning
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 124002.png"
+                  alt="TensorFlow Developer Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">Code Neural Hackathon 2025</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 124322.png"
+                  alt="Infosys Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">ALFIDO TECH INTERNSHIP</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 123749.png"
+                  alt="Microsoft Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">Django Masterclass (Udemy)</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 123239.png"
+                  alt="SWAYAM Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">Prompt Engg with Copilot</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 123215.png"
+                  alt="Codethon Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">Deloitte Tech Job Simulation</div>
+              </div>
+            </div>
+
+            <div class="cert-img-card reveal">
+              <div class="cert-img-area">
+                <img
+                  src="images/Screenshot 2026-02-28 123937.png"
+                  alt="GeeksforGeeks Certificate"
+                  class="cert-img"
+                />
+                <div class="cert-img-empty">Drop image here</div>
+              </div>
+              <div class="cert-img-footer">
+                <div class="cert-view-btn">HackerRank Java</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== ACHIEVEMENTS ========== -->
+      <section id="achievements" class="section achievements-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-label">&lt; Achievements /&gt;</p>
+            <h2 class="section-heading">Milestones &amp; Recognition</h2>
+            <p class="section-sub">
+              Highlights from hackathons, internships, and freelance work.
+            </p>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card glass-card reveal">
+              <div class="ach-icon">&#127942;</div>
+              <div class="ach-body">
+                <h4 class="ach-title">Top 20 Finalist &mdash; CODE NEURAL</h4>
+                <p class="ach-desc">
+                  State Level Hackathon &mdash; ranked among top 20 out of
+                  hundreds of participating teams.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-card reveal">
+              <div class="ach-icon">&#127757;</div>
+              <div class="ach-body">
+                <h4 class="ach-title">5+ International Client Projects</h4>
+                <p class="ach-desc">
+                  Completed and delivered projects for clients in the UK &amp;
+                  UAE, building custom e-commerce and startup web solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-card reveal">
+              <div class="ach-icon">&#127891;</div>
+              <div class="ach-body">
+                <h4 class="ach-title">A+ Internship Performance</h4>
+                <p class="ach-desc">
+                  Machine Learning Internship at Alfido Tech &mdash; awarded A+
+                  grade with 92.97% performance score.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievement-card glass-card reveal">
+              <div class="ach-icon">&#128027;</div>
+              <div class="ach-body">
+                <h4 class="ach-title">10+ Production Bugs Fixed</h4>
+                <p class="ach-desc">
+                  Identified and resolved 10+ critical production bugs during
+                  internship, improving system reliability and user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Left -->
+            <div class="contact-left reveal">
+              <p class="section-label">&lt; Get In Touch /&gt;</p>
+              <h2 class="section-heading">
+                Let's build something<br />worth talking about.
+              </h2>
+              <p class="contact-desc">
+                Whether you have a project in mind, an interesting problem to
+                solve, or just want to have a technical conversation ,my inbox
+                is always open.
+              </p>
+              <div class="contact-details">
+                <div class="contact-row">
+                  <div class="contact-icon-wrap">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Email</span>
+                    <a
+                      href="mailto:taniyayasmin65@gmail.com"
+                      class="contact-value"
+                      >taniyayasmin65@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-icon-wrap">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value"
+                      >Bangalore, Karnataka &mdash; Open to Remote</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="contact-socials">
+                <a
+                  href="https://github.com/TaniyaYasmin"
+                  target="_blank"
+                  class="social-btn"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/taniya-yasmin"
+                  target="_blank"
+                  class="social-btn"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right â€” Contact form -->
+            <div class="contact-right reveal reveal-right">
+              <div class="glass-card contact-form-card">
+                <form
+                  class="contact-form"
+                  id="contact-form"
+                  action="https://formsubmit.co/taniyayasmin65@gmail.com"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Portfolio Contact Message"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                    type="hidden"
+                    name="_next"
+                    id="contact-next"
+                    value=""
+                  />
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        autocomplete="name"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        autocomplete="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      placeholder="Project inquiry, collaboration..."
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Tell me about your project or idea..."
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="form-submit" id="form-submit">
+                    <span class="submit-text">Send Message</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <span class="footer-name">Taniya Yasmin</span>
+            <p class="footer-tagline">
+              Full Stack Developer &amp; AI Enthusiast
+            </p>
+          </div>
+
+          <!-- Quick links -->
+          <div class="footer-nav">
+            <span class="footer-nav-title">Navigate</span>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#stack">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <!-- Socials -->
+          <div class="footer-social-col">
+            <span class="footer-nav-title">Connect</span>
+            <a
+              href="https://github.com/TaniyaYasmin"
+              target="_blank"
+              class="footer-social-link"
+              aria-label="GitHub"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/taniya-yasmin"
+              target="_blank"
+              class="footer-social-link"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="mailto:taniyayasmin65@gmail.com"
+              class="footer-social-link"
+              aria-label="Email"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Taniya Yasmin &nbsp;&middot;&nbsp; Crafted with
+            precision &amp; purpose
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== RESUME MODAL ========== -->
+    <div id="resume-modal" class="resume-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+      <div class="resume-modal-card">
+        <div class="resume-modal-header">
+          <span id="resume-modal-title" class="resume-modal-title">Taniya's Resume</span>
+          <button id="resume-modal-close" class="resume-modal-close" aria-label="Close resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="resume-modal-body">
+          <iframe
+            id="resume-iframe"
+            src="Taniya's Resume.pdf#view=Fit"
+            class="resume-modal-iframe"
+            title="Taniya's Resume"
+          ></iframe>
+        </div>
+        <div class="resume-modal-footer">
+          <a
+            id="download-resume"
+            href="Taniya's Resume.pdf"
+            download="Taniya's Resume.pdf"
+            class="btn-primary resume-download-btn"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1v9M4 7l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
