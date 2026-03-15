@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1280" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taniya's Portfolio</title>
     <meta
       name="description"
@@ -327,101 +327,30 @@
             </p>
           </div>
 
-          <!-- Featured project carousel (screenshot style) -->
+          <!-- Featured project carousel (Desktop Only) -->
           <div class="proj-carousel reveal" id="proj-carousel">
             <!-- Floating side arrows -->
-            <button
-              class="car-arrow left-arrow"
-              id="car-prev"
-              aria-label="Previous project"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
+            <button class="car-arrow left-arrow" id="car-prev" aria-label="Previous project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
-            <button
-              class="car-arrow right-arrow"
-              id="car-next"
-              aria-label="Next project"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+            <button class="car-arrow right-arrow" id="car-next" aria-label="Next project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6" /></svg>
             </button>
 
             <div class="proj-carousel-viewport">
               <div class="carousel-track" id="carousel-track">
-                <!-- Slide 1: SyncVerse -->
+                <!-- Slide 1: AlgoRush -->
                 <div class="carousel-slide fslide">
                   <div class="fslide-img">
-                    <img
-                      src="assets/images/algorush.png"
-                      alt="AlgoRush project preview"
-                      class="fslide-hero-img"
-                    />
+                    <img src="assets/images/algorush.png" alt="AlgoRush preview" class="fslide-hero-img" />
                   </div>
                   <div class="fslide-card">
                     <span class="featured-label">FEATURED PROJECT</span>
                     <h3 class="fslide-title">AlgoRush</h3>
-                    <p class="fslide-desc">
-                      Full-stack AI chatbot designed for interactive DSA learning with
-                      smart prompt handling, chat history, voice input, and JWT-based
-                      authentication.
-                    </p>
-                    <div class="fslide-tags">
-                      <span class="proj-tag sm">HTML</span>
-                      <span class="proj-tag sm">CSS</span>
-                      <span class="proj-tag sm">JavaScript</span>
-                      <span class="proj-tag sm">Node.js</span>
-                      <span class="proj-tag sm">MongoDB</span>
-                      <span class="proj-tag sm">Express.js</span>
-                      <span class="proj-tag sm">JWT</span>
-                    </div>
+                    <p class="fslide-desc">Full-stack AI chatbot designed for interactive DSA learning.</p>
                     <div class="fslide-links">
-                      <a href="https://github.com/Taniya-Yasmin/AlgoRush" target="_blank" aria-label="GitHub" class="fslide-icon-btn">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                          />
-                        </svg>
-                      </a>
-                      <a
-                        href="#"
-                        aria-label="Live Demo"
-                        class="fslide-icon-btn"
-                      >
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
-                          />
-                        </svg>
-                      </a>
+                      <a href="https://github.com/Taniya-Yasmin/AlgoRush" target="_blank" class="fslide-icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg></a>
+                      <a href="#" class="fslide-icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg></a>
                     </div>
                   </div>
                 </div>
@@ -429,64 +358,99 @@
                 <!-- Slide 2: FinTech -->
                 <div class="carousel-slide fslide">
                   <div class="fslide-img">
-                    <img
-                      src="assets/images/fintech.png"
-                      alt="FinTech project preview"
-                      class="fslide-hero-img"
-                    />
+                    <img src="assets/images/fintech.png" alt="FinTech preview" class="fslide-hero-img" />
                   </div>
                   <div class="fslide-card">
                     <span class="featured-label">FEATURED PROJECT</span>
-                    <h3 class="fslide-title">FinTech</h3>
-                    <p class="fslide-desc">
-                      A full-stack web application that helps users track transactions,
-                      manage budgets, and visualize spending patterns through interactive
-                      dashboards, built with a responsive UI and secure data handling.
-                    </p>
-                    <div class="fslide-tags">
-                      <span class="proj-tag sm">React</span>
-                      <span class="proj-tag sm">Node.js</span>
-                      <span class="proj-tag sm">Express</span>
-                      <span class="proj-tag sm">MongoDB</span>
-                      <span class="proj-tag sm">Chart.js</span>
-                      <span class="proj-tag sm">JWT Auth</span>
-                    </div>
+                    <h3 class="fslide-title">FinTech Tracker</h3>
+                    <p class="fslide-desc">Full-stack application for tracking transactions & budgets.</p>
                     <div class="fslide-links">
-                      <a href="#" target="_blank" aria-label="GitHub" class="fslide-icon-btn">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                          />
-                        </svg>
-                      </a>
-                      <a
-                        href="#"
-                        aria-label="Live Demo"
-                        class="fslide-icon-btn"
-                      >
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
-                          />
-                        </svg>
-                      </a>
+                      <a href="#" target="_blank" class="fslide-icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg></a>
+                      <a href="#" class="fslide-icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="carousel-dots">
+              <span class="car-dot active" data-idx="0"></span>
+              <span class="car-dot" data-idx="1"></span>
+            </div>
+          </div>
+
+          <!-- Main Minimalist Expandable Accordion Container (Mobile Only) -->
+          <div class="accordion-featured reveal">
+            
+            <!-- Accordion Item 1: AlgoRush -->
+            <div class="accordion-item" id="accordion-1">
+              <div class="accordion-header">
+                <span class="acc-number">1</span>
+                <h3 class="acc-title">AlgoRush</h3>
+                <span class="acc-year">2023</span>
+                <div class="acc-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" class="icon-plus"/><path d="M5 12h14" class="icon-minus"/></svg>
+                </div>
+              </div>
+              
+              <div class="accordion-content">
+                <div class="acc-content-inner">
+                  <div class="acc-img-wrapper">
+                     <img src="assets/images/algorush.png" alt="AlgoRush Preview" />
+                  </div>
+                  <div class="acc-info">
+                    <p class="acc-desc">
+                      Full-stack AI chatbot designed for interactive DSA learning with smart prompt handling, chat history, voice input, and JWT-based authentication.
+                    </p>
+                    <div class="fslide-tags">
+                      <span class="proj-tag sm">Node.js</span>
+                      <span class="proj-tag sm">Express</span>
+                      <span class="proj-tag sm">MongoDB</span>
+                      <span class="proj-tag sm">AI</span>
+                    </div>
+                    <div class="acc-links">
+                      <a href="https://github.com/Taniya-Yasmin/AlgoRush" target="_blank" aria-label="GitHub" class="acc-link-btn">View Code <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                      <a href="#" aria-label="Live Demo" class="acc-link-btn">Live Site <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2: FinTech -->
+            <div class="accordion-item" id="accordion-2">
+              <div class="accordion-header">
+                <span class="acc-number">2</span>
+                <h3 class="acc-title">FinTech Tracker</h3>
+                <span class="acc-year">2024</span>
+                <div class="acc-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" class="icon-plus"/><path d="M5 12h14" class="icon-minus"/></svg>
+                </div>
+              </div>
+              
+              <div class="accordion-content">
+                <div class="acc-content-inner">
+                  <div class="acc-img-wrapper">
+                     <img src="assets/images/fintech.png" alt="FinTech Preview" />
+                  </div>
+                  <div class="acc-info">
+                    <p class="acc-desc">
+                      A sleek full-stack web application that helps users track transactions, manage budgets, and visualize their spending with real-time analytics.
+                    </p>
+                    <div class="fslide-tags">
+                      <span class="proj-tag sm">React</span>
+                      <span class="proj-tag sm">Node.js</span>
+                      <span class="proj-tag sm">PostgreSQL</span>
+                    </div>
+                    <div class="acc-links">
+                      <a href="#" target="_blank" aria-label="GitHub" class="acc-link-btn">View Code <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                      <a href="#" aria-label="Live Demo" class="acc-link-btn">Live Site <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Project gallery with filters -->
@@ -497,9 +461,10 @@
             <button class="filter-btn" data-filter="devops">DEVOPS</button>
             <button class="filter-btn" data-filter="mini">MINI PROJECTS</button>
           </div>
+          <div class="all-projects-wrapper">
 
-          <div class="projects-grid">
-            <article class="project-card" data-category="ml">
+            <div class="projects-grid" id="all-projects-grid">
+              <article class="project-card" data-category="ml">
               <div class="proj-card-header">
                 <div class="proj-icon" style="overflow: hidden; padding: 0">
                   <img
@@ -1182,16 +1147,17 @@
               <p class="proj-card-desc">A full-stack web application that helps users track transactions, manage budgets, and visualize spending patterns through interactive dashboards, built with a responsive UI and secure data handling.</p>
               <div class="proj-card-tags">
                 <span class="proj-tag sm">React</span>
-<span class="proj-tag sm">Node.js</span>
-<span class="proj-tag sm">Express</span>
-<span class="proj-tag sm">MongoDB</span>
-<span class="proj-tag sm">Chart.js</span>
-<span class="proj-tag sm">JWT Auth</span>
+                <span class="proj-tag sm">Node.js</span>
+                <span class="proj-tag sm">Express</span>
+                <span class="proj-tag sm">MongoDB</span>
+                <span class="proj-tag sm">Chart.js</span>
+                <span class="proj-tag sm">JWT Auth</span>
               </div>
             </article>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- ========== EXPERIENCE ========== -->
       <section id="experience" class="section experience-section">
@@ -1604,42 +1570,50 @@
 
           <div class="achievements-grid">
             <div class="achievement-card glass-card reveal">
-              <div class="ach-icon">&#127942;</div>
               <div class="ach-body">
-                <h4 class="ach-title">Top 20 Finalist &mdash; CODE NEURAL</h4>
+                <div class="ach-header">
+                  <div class="ach-icon">&#127942;</div>
+                  <h4 class="ach-title">Top 20 Hackathon Finalist</h4>
+                </div>
                 <p class="ach-desc">
-                  State Level Hackathon &mdash; ranked among top 20 out of
+                  State Level Hackathon , ranked among top 20 out of
                   hundreds of participating teams.
                 </p>
               </div>
             </div>
 
             <div class="achievement-card glass-card reveal">
-              <div class="ach-icon">&#127757;</div>
               <div class="ach-body">
-                <h4 class="ach-title">5+ International Client Projects</h4>
+                <div class="ach-header">
+                  <div class="ach-icon">&#127757;</div>
+                  <h4 class="ach-title">5+ International Client Projects</h4>
+                </div>
                 <p class="ach-desc">
-                  Completed and delivered projects for clients in the UK &amp;
+                  Completed and delivered projects for clients in the UK,
                   UAE, building custom e-commerce and startup web solutions.
                 </p>
               </div>
             </div>
 
             <div class="achievement-card glass-card reveal">
-              <div class="ach-icon">&#127891;</div>
               <div class="ach-body">
-                <h4 class="ach-title">A+ Internship Performance</h4>
+                <div class="ach-header">
+                  <div class="ach-icon">&#127891;</div>
+                  <h4 class="ach-title">A+ Internship Performance</h4>
+                </div>
                 <p class="ach-desc">
-                  Machine Learning Internship at Alfido Tech &mdash; awarded A+
+                  Machine Learning Internship at Alfido Tech  awarded A+
                   grade with 92.97% performance score.
                 </p>
               </div>
             </div>
 
             <div class="achievement-card glass-card reveal">
-              <div class="ach-icon">&#128027;</div>
               <div class="ach-body">
-                <h4 class="ach-title">10+ Production Bugs Fixed</h4>
+                <div class="ach-header">
+                  <div class="ach-icon">&#128027;</div>
+                  <h4 class="ach-title">10+ Production Bugs Fixed</h4>
+                </div>
                 <p class="ach-desc">
                   Identified and resolved 10+ critical production bugs during
                   internship, improving system reliability and user experience.
@@ -1851,77 +1825,79 @@
             </p>
           </div>
 
-          <!-- Quick links -->
-          <div class="footer-nav">
-            <span class="footer-nav-title">Navigate</span>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#stack">Skills</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
-          </div>
+          <div class="footer-links">
+            <!-- Quick links -->
+            <div class="footer-nav">
+              <span class="footer-nav-title">Navigate</span>
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#experience">Experience</a>
+              <a href="#stack">Skills</a>
+              <a href="#certifications">Certifications</a>
+              <a href="#achievements">Achievements</a>
+              <a href="#contact">Contact</a>
+            </div>
 
-          <!-- Socials -->
-          <div class="footer-social-col">
-            <span class="footer-nav-title">Connect</span>
-            <a
-              href="https://github.com/TaniyaYasmin"
-              target="_blank"
-              class="footer-social-link"
-              aria-label="GitHub"
-            >
-              <svg
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+            <!-- Socials -->
+            <div class="footer-social-col">
+              <span class="footer-nav-title">Connect</span>
+              <a
+                href="https://github.com/TaniyaYasmin"
+                target="_blank"
+                class="footer-social-link"
+                aria-label="GitHub"
               >
-                <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                />
-              </svg>
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/taniya-yasmin"
-              target="_blank"
-              class="footer-social-link"
-              aria-label="LinkedIn"
-            >
-              <svg
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/taniya-yasmin"
+                target="_blank"
+                class="footer-social-link"
+                aria-label="LinkedIn"
               >
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-              LinkedIn
-            </a>
-            <a
-              href="mailto:taniyayasmin65@gmail.com"
-              class="footer-social-link"
-              aria-label="Email"
-            >
-              <svg
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="mailto:taniyayasmin65@gmail.com"
+                class="footer-social-link"
+                aria-label="Email"
               >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              Email
-            </a>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                Email
+              </a>
+            </div>
           </div>
         </div>
         <div class="footer-bottom">

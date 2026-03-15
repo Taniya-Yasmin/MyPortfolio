@@ -330,7 +330,34 @@
     });
 })();
 
-// ============ PROJECT CAROUSEL ============
+// ============ FEATURED EXPANDABLE ACCORDION (Mobile) ============
+(function initAccordion() {
+  const headers = document.querySelectorAll('.accordion-header');
+  if (headers.length === 0) return;
+  
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+         if(otherItem !== item) otherItem.classList.remove('active');
+      });
+      
+      if(isOpen) {
+         item.classList.remove('active');
+      } else {
+         item.classList.add('active');
+         setTimeout(() => {
+             const y = item.getBoundingClientRect().top + window.scrollY - 100;
+             window.scrollTo({top: y, behavior: 'smooth'});
+         }, 300);
+      }
+    });
+  });
+})();
+
+// ============ PROJECT CAROUSEL (Desktop) ============
 (function initCarousel() {
   const track = document.getElementById("carousel-track");
   const prevBtn = document.getElementById("car-prev");
@@ -348,45 +375,30 @@
     dots.forEach((d, i) => d.classList.toggle("active", i === current));
   }
 
-  function next() {
-    goTo(current + 1);
-  }
-  function prev() {
-    goTo(current - 1);
-  }
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
 
-  function startAuto() {
-    timer = setInterval(next, 4000);
-  }
-  function stopAuto() {
-    clearInterval(timer);
-  }
+  function startAuto() { timer = setInterval(next, 5000); }
+  function stopAuto() { clearInterval(timer); }
 
-  nextBtn &&
-    nextBtn.addEventListener("click", () => {
-      stopAuto();
-      next();
-      startAuto();
-    });
-  prevBtn &&
-    prevBtn.addEventListener("click", () => {
-      stopAuto();
-      prev();
-      startAuto();
-    });
+  nextBtn && nextBtn.addEventListener("click", () => {
+    stopAuto();
+    next();
+    startAuto();
+  });
+  prevBtn && prevBtn.addEventListener("click", () => {
+    stopAuto();
+    prev();
+    startAuto();
+  });
 
-  dots.forEach((dot) => {
+  dots.forEach(dot => {
     dot.addEventListener("click", () => {
       stopAuto();
       goTo(parseInt(dot.dataset.idx));
       startAuto();
     });
   });
-
-  // Pause on hover
-  const carousel = document.getElementById("proj-carousel");
-  carousel && carousel.addEventListener("mouseenter", stopAuto);
-  carousel && carousel.addEventListener("mouseleave", startAuto);
 
   startAuto();
 })();
