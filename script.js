@@ -215,28 +215,55 @@
 (function initForm() {
   const form = document.getElementById("contact-form");
   const submitBtn = document.getElementById("form-submit");
-  const nextInput = document.getElementById("contact-next");
-  if (!form) return;
+  if (!form || !submitBtn) return;
 
-  form.addEventListener("submit", (e) => {
+  // ── Toast helper ──────────────────────────────────────
+  function showToast(msg, type = "success") {
+    let toast = document.getElementById("form-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "form-toast";
+      document.body.appendChild(toast);
+    }
+    toast.className = "form-toast " + type;
+    toast.innerHTML =
+      type === "success"
+        ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>${msg}</span>`
+        : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>${msg}</span>`;
+    toast.classList.add("show");
+    clearTimeout(toast._hide);
+    toast._hide = setTimeout(() => toast.classList.remove("show"), 4000);
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
     if (!form.checkValidity()) {
       shakeForm();
       form.reportValidity();
-      e.preventDefault();
       return;
     }
 
-    if (nextInput) {
-      const baseUrl = `${window.location.origin}${window.location.pathname}`;
-      nextInput.value = `${baseUrl}#contact`;
-    }
-
-    // Sending state while browser submits the form.
-    submitBtn.classList.add("submitted");
-    submitBtn.querySelector(".submit-text").textContent = "Sending...";
+    // Loading state
+    const btnText = submitBtn.querySelector(".submit-text");
+    const btnIcon = submitBtn.querySelector("svg");
     submitBtn.disabled = true;
-    const icon = submitBtn.querySelector("svg");
-    if (icon) icon.style.display = "none";
+    if (btnText) btnText.textContent = "Sending…";
+    if (btnIcon) btnIcon.style.display = "none";
+
+    try {
+      const data = new FormData(form);
+      const action = form.getAttribute("action");
+      await fetch(action, { method: "POST", body: data, mode: "no-cors" });
+      showToast("Message sent! I'll get back to you soon", "success");
+      form.reset();
+    } catch (_) {
+      showToast("Something went wrong. Please try again.", "error");
+    } finally {
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = "Send Message";
+      if (btnIcon) btnIcon.style.display = "";
+    }
   });
 
   function shakeForm() {
@@ -332,26 +359,26 @@
 
 // ============ FEATURED EXPANDABLE ACCORDION (Mobile) ============
 (function initAccordion() {
-  const headers = document.querySelectorAll('.accordion-header');
+  const headers = document.querySelectorAll(".accordion-header");
   if (headers.length === 0) return;
-  
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
+
+  headers.forEach((header) => {
+    header.addEventListener("click", () => {
       const item = header.parentElement;
-      const isOpen = item.classList.contains('active');
-      
-      document.querySelectorAll('.accordion-item').forEach(otherItem => {
-         if(otherItem !== item) otherItem.classList.remove('active');
+      const isOpen = item.classList.contains("active");
+
+      document.querySelectorAll(".accordion-item").forEach((otherItem) => {
+        if (otherItem !== item) otherItem.classList.remove("active");
       });
-      
-      if(isOpen) {
-         item.classList.remove('active');
+
+      if (isOpen) {
+        item.classList.remove("active");
       } else {
-         item.classList.add('active');
-         setTimeout(() => {
-             const y = item.getBoundingClientRect().top + window.scrollY - 100;
-             window.scrollTo({top: y, behavior: 'smooth'});
-         }, 300);
+        item.classList.add("active");
+        setTimeout(() => {
+          const y = item.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 300);
       }
     });
   });
@@ -375,24 +402,34 @@
     dots.forEach((d, i) => d.classList.toggle("active", i === current));
   }
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+  function next() {
+    goTo(current + 1);
+  }
+  function prev() {
+    goTo(current - 1);
+  }
 
-  function startAuto() { timer = setInterval(next, 5000); }
-  function stopAuto() { clearInterval(timer); }
+  function startAuto() {
+    timer = setInterval(next, 5000);
+  }
+  function stopAuto() {
+    clearInterval(timer);
+  }
 
-  nextBtn && nextBtn.addEventListener("click", () => {
-    stopAuto();
-    next();
-    startAuto();
-  });
-  prevBtn && prevBtn.addEventListener("click", () => {
-    stopAuto();
-    prev();
-    startAuto();
-  });
+  nextBtn &&
+    nextBtn.addEventListener("click", () => {
+      stopAuto();
+      next();
+      startAuto();
+    });
+  prevBtn &&
+    prevBtn.addEventListener("click", () => {
+      stopAuto();
+      prev();
+      startAuto();
+    });
 
-  dots.forEach(dot => {
+  dots.forEach((dot) => {
     dot.addEventListener("click", () => {
       stopAuto();
       goTo(parseInt(dot.dataset.idx));
