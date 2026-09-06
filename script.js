@@ -384,7 +384,7 @@
   });
 })();
 
-// ============ PROJECT CAROUSEL (Desktop) ============
+// PROJECT CAROUSEL (Desktop)
 (function initCarousel() {
   const track = document.getElementById("carousel-track");
   const prevBtn = document.getElementById("car-prev");
@@ -536,83 +536,19 @@ function closeMobileMenu() {
   );
 })();
 
-// ============ TECH STACK ICONS ============
-(function initTechStackIcons() {
-  const iconMap = {
-    JavaScript: "https://cdn.simpleicons.org/javascript/F7DF1E",
-    Python: "https://cdn.simpleicons.org/python/3776AB",
-    "C++": "https://cdn.simpleicons.org/cplusplus/00599C",
-    Java: "https://cdn.simpleicons.org/openjdk/ED8B00",
-    C: "https://cdn.simpleicons.org/c/00599C",
-    HTML: "https://cdn.simpleicons.org/html5/E34F26",
-    CSS: "https://cdn.simpleicons.org/css/1572B6",
-    "Node.js": "https://cdn.simpleicons.org/nodedotjs/339933",
-    "Express.js": "https://cdn.simpleicons.org/express/FFFFFF",
-    JWT: "https://cdn.simpleicons.org/jsonwebtokens/FFFFFF",
-    "Client Server Architecture": "https://cdn.simpleicons.org/nginx/009639",
-    "RESTful APIs": "https://cdn.simpleicons.org/openapiinitiative/6BA539",
-    "API Development": "https://cdn.simpleicons.org/postman/FF6C37",
-    Authentication: "https://cdn.simpleicons.org/auth0/EB5424",
-    MongoDB: "https://cdn.simpleicons.org/mongodb/47A248",
-    MySQL: "https://cdn.simpleicons.org/mysql/4479A1",
-    "Database Design": "https://cdn.simpleicons.org/postgresql/4169E1",
-    "CRUD Operations": "https://cdn.simpleicons.org/hasura/1EB4D4",
-    Docker: "https://cdn.simpleicons.org/docker/2496ED",
-    Git: "https://cdn.simpleicons.org/git/F05032",
-    GitHub: "https://cdn.simpleicons.org/github/FFFFFF",
-    Nginx: "https://cdn.simpleicons.org/nginx/009639",
-    Postman: "https://cdn.simpleicons.org/postman/FF6C37",
-    Linux: "https://cdn.simpleicons.org/linux/FCC624",
-    Bootstrap: "https://cdn.simpleicons.org/bootstrap/7952B3",
-    "AWS (EC2, S3, IAM)": "https://cdn.simpleicons.org/amazonaws/FF9900",
-    Jenkins: "https://cdn.simpleicons.org/jenkins/D24939",
-    "Git, GitHub, Linux": "https://cdn.simpleicons.org/github/FFFFFF",
-    "Data Structures and Algorithms":
-      "https://cdn.simpleicons.org/leetcode/FFA116",
-    "Operating Systems": "https://cdn.simpleicons.org/linux/FCC624",
-    DBMS: "https://cdn.simpleicons.org/sqlite/003B57",
-    "Computer Networks": "https://cdn.simpleicons.org/cisco/1BA0D7",
-    NumPy: "https://cdn.simpleicons.org/numpy/013243",
-    Pandas: "https://cdn.simpleicons.org/pandas/150458",
-    "Scikit-learn": "https://cdn.simpleicons.org/scikitlearn/F7931E",
-    TensorFlow: "https://cdn.simpleicons.org/tensorflow/FF6F00",
-    PyTorch: "https://cdn.simpleicons.org/pytorch/EE4C2C",
-  };
-  const fallbackIcon = "https://cdn.simpleicons.org/devbox/7E57C2";
+// TECH STACK ICONS
 
-  document.querySelectorAll("#stack .stack-item").forEach((item) => {
-    const nameEl = item.querySelector(".si-name");
-    const marker = item.querySelector(".si-dot");
-    if (!nameEl || !marker || item.querySelector(".si-icon")) return;
-
-    const name = nameEl.textContent.trim();
-    const icon = document.createElement("img");
-    icon.className = "si-icon";
-    icon.src = iconMap[name] || fallbackIcon;
-    icon.alt = name + " icon";
-    icon.loading = "lazy";
-    icon.decoding = "async";
-    icon.onerror = () => {
-      icon.src = fallbackIcon;
-    };
-
-    marker.replaceWith(icon);
-  });
-})();
-
-// ============ HERO ROTATING ROLE ============
+//HERO ROTATING ROLE
 (function initHeroRotatingRole() {
   const el = document.getElementById("rotating-role");
   if (!el) return;
 
   const roles = [
-    "MERN Stack Developer",
+    "Full Stack Developer",
     "DevOps Practitioner",
     "Open Source Contributor",
-    "AI/ML Explorer",
-    "Tech Enthusiast",
-    "Problem Solver",
-    "Programmer",
+    "Exploring GenAI",
+    "Java Enthusiast",
   ];
 
   let index = 0;
@@ -621,8 +557,7 @@ function closeMobileMenu() {
     el.textContent = roles[index];
   }, 1800);
 })();
-
-// ============ RESUME MODAL ============
+//RESUME MODAL
 (function initResumeModal() {
   const openBtn = document.getElementById("btn-resume");
   const modal = document.getElementById("resume-modal");
@@ -678,7 +613,7 @@ function closeMobileMenu() {
       fetch("https://formsubmit.co/taniyayasmin65@gmail.com", {
         method: "POST",
         body: formData,
-        mode: "no-cors", // Prevent CORS errors, silent submit
-      }).catch(() => {}); // silent fail — never block the download
+        mode: "no-cors",
+      }).catch(() => {});
     });
 })();

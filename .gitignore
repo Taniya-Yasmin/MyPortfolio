@@ -1,0 +1,21 @@
+# Environment variables — NEVER commit secrets
+.env
+.env*
+*.env
+.env.local
+.env.production
+.env.development
+
+# Node modules (if any)
+node_modules/
+
+# Vercel output
+.vercel/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/settings.json
+*.swp
